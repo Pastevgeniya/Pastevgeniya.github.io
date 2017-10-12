@@ -96,19 +96,25 @@ background: green;
 }
 
 
-h1 {
+header {
   position: fixed;
   margin: 50px;
-  border: blue; 50px;
+  border: 1px  solid black;
   top: 0px;
+  left: 0px;
+  right: 50px;
+  width: 850px;
+  background: gray;
+  z-index:1;
 }
 
 nav {
 
-  position: fixed;
+  position: absolute;
   padding-left: 300px;
-  margin: 100px;
+  margin: 50px;
   height: 50px;
+  z-index: 1;
 }
 
 main {
@@ -124,24 +130,354 @@ section {
 aside {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50px;
   width: 200px;
   background: gray;
-  height: 500px;
+  height: 1000px;
+
 }
 
-article {
+.article {
   padding-right: 220px;
 }
 
-article-1 {
+.article-1 {
+  border: 1px  solid black;
   width: 600px;
   height: 200px;
-  padding: 100px;
+  padding: 50px;
   margin: 50px;
   overflow: 20px;
 }
 
 footer {
-  padding-left: 600px;
+  margin: 50px;
+  border: 1px  solid black;
+  width: 1100px;
+  right: 200px;
+  background: pink;
+}
+
+
+/*background-image */
+.background-image-svg {
+  width: 700px;
+  height: 100px;
+  margin: 100px;
+  background-image: url("img/champagne.svg");
+  background-repeat: repeat;
+}
+
+.background-image-img {
+  width: 700px;
+  height: 100px;
+  margin: 100px;
+  background-image: url("img/4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+}
+
+
+   /* flexbox */
+   .flex-container {
+     display: flex;
+     flex-direction: row;
+     height: 400px;
+     background-color: white;
+     border: 1px solid navy;
+
+   }
+
+   .flex-element {
+
+   }
+
+   .flex-element-1 {
+     order: 5;
+     background-color: #009688;
+   }
+
+   .flex-element-2 {
+     order: 3;
+     background-color: #2196f3;
+     flex-grow: 5;
+   }
+
+   .flex-element-3 {
+     order: 1;
+     background-color: green;
+   }
+
+   .flex-element-4 {
+     order: 4;
+     background-color: red;
+   }
+
+   .flex-element-5 {
+     order: 2;
+     background-color: green;
+   }
+
+
+   .background-color {
+     width: 200px;
+     height: 200px;
+     background-color: pink;
+     position: relative;
+     margin: 50px;
+   }
+
+
+   .background-color-child {
+     width: 200px;
+     height: 200px;
+     background-color: blue;
+     background-image:  url("img/coconut.svg");
+     background-size: 100px 100px;
+     border: 1px  solid black;
+     position: absolute;
+     top: 50px;
+     left: 50px;
+   }
+
+.linear-gradient {
+  width: 200px;
+  height: 200px;
+background-image: linear-gradient(gray, black);
+margin: 50px;
+}
+
+.linear-gradient-1 {
+  width: 200px;
+  height: 200px;
+background-image: linear-gradient(to top right,orange, pink);
+margin: 50px;
+}
+
+.linear-gradient-2 {
+  width: 200px;
+  height: 200px;
+background-image: linear-gradient(90deg, green, red);
+margin: 50px;
+}
+
+
+.linear-gradient-3 {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(90deg, green, red);
+  margin: 50px;
+}
+
+
+
+
+.radial-gradient {
+background-image: radial-gradient(90deg, green, red);
+margin: 50px;
+}
+
+
+.radial-gradient-1 {
+  width: 200px;
+  height: 200px;
+background-image: radial-gradient(at left, green, red);
+margin: 50px;
+}
+
+
+.gradient-generator {
+  width: 200px;
+  height: 200px;
+  background-image: background: linear-gradient(45deg, #e570e7 0%,#c85ec7 48%,#a849a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+margin: 50px;
+}
+
+
+.box-shadow {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border: 1px;
+  box-shadow: 10px 15px 5px 1px black;
+  margin: 30px;
+}
+
+.box-shadow-inset{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border: 1px;
+  box-shadow: inset 10px 15px 5px 1px yellow;
+  margin: 30px;
+}
+
+
+.calc-parent {
+  display: flex;
+height: 300px;
+border: 1px solid gray;
+margin-left: -10px;
+margin-right: -10px;
+margin-bottom: 200px;
+}
+
+.calc-parent-inner {
+  display: flex;
+height: 300px;
+border: 1px solid gray;
+margin-left: -10px;
+margin-right: -10px;
+margin-bottom: 200px;
+}
+
+
+.calc-child {
+width: calc(50% - 20px);
+margin: 0 10px;
+}
+
+
+.calc-parent-part {
+  display: flex;
+height: 300px;
+border: 1px solid gray;
+margin-left: -10px;
+margin-right: -10px;
+margin-bottom: 200px;
+}
+
+.calc-child-part {
+  display: flex;
+height: 200px;
+border: 1px solid gray;
+
+}
+
+.calc-child-part {
+width: calc(100%/ 7 - 10px);
+background-color: green;
+margin: 0 5px;
+}
+
+.calc-parent-2 {
+  display: flex;
+  height: 200px;
+  border: 1px solid gray;
+}
+
+.calc-child-responsive {
+  width: calc(100% - 50px);
+  background-color: yellow;
+}
+
+.calc-child-fixed {
+  width: 50px;
+  background-color: blue;
+}
+
+
+.hover {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 20px;
+}
+
+.hover:hover {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border: 1px dashed black;
+}
+
+.link-hover {
+  color: salmon;
+  font-size: 36 px;
+}
+
+.link-hover:hover {
+  color: black;
+  text-decoration: none;
+}
+
+
+.focus {
+height: 50px;
+border: 1px solid red;
+border-radius: 10px;
+outline: 0;
+}
+
+
+.focus:focus {
+box-shadow: inset 0 0 5px 0 blue;
+}
+
+
+
+.pseudo-classes-parent {
+  height: 20px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.pseudo-classes-child: first-child {
+  background-color: blue;
+  margin-top: 0;
+}
+
+.pseudo-classes-child: last-child  {
+  background-color: green;
+  margin-bottom: 0;
+}
+
+
+.pseudo-classes-child: last-child  {
+  background-color: green;
+  margin-bottom: 0;
+}
+
+.pseudo-classes-child: last-child  {
+  background-color: green;
+  margin-bottom: 0;
+}
+
+
+.pseudo-elements:before {
+  content: 'Я впереди всего текста';
+  color: red;
+}
+
+.pseudo-elements::after {
+  content: 'Я после всего текста';
+  color: orange;
+}
+
+
+.transition-color {
+  font-size: 30px;
+  color: black;
+  transition: color 1s ease 1s, font-size 2s ease-out;
+}
+
+
+.transition-color:hover {
+  color:red;
+  font-size: 45px;
+}
+
+.transition-left {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  position: relative;
+  left: 0;
+  transition: left 3s ease-in 1s;
+}
+
+.transition-left: hover {
+  left: 200px;
 }
